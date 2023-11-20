@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="panier.css">
+    <link rel="icon" href="Assets/logo_animaux_domestiques.png">
+    <link rel="stylesheet" href="https://use.typekit.net/rtk3sdv.css">
+    <title>E-Commerce HTML/CSS/Bootsrtap</title>
+</head>
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+            <div class="container-fluid">
+
+              <img src="Assets/logo_animaux_domestiques.png" alt="logo animaux" width="70">
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu 1</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="#">Chiens de chasse</a>
+                        <a href="#">Articles de blog (agir en faveur des espèces protègées)</a>
+                        <a href="#">Chihuahua : les problèmes buco-dentaires les plus courants</a>
+                        <a href="#">Pourquoi mon chien refuse-t-il de s'alimenter ?</a>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu 2</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a href="#">Pourquoi les chats sont si mignons ?</a>
+                      <a href="#">Pour quelle raison les chats refusent de prendre leur bain ?</a>
+                      <a href="#">Comment bien choisir son chat ?</a>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu 3</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a href="#">Comment prendre soin des petits animaux de compagnies ?</a>
+                      <a href="#">Exemples d'oiseaux à se proccurer</a>
+                      <a href="#">Quel animal de compagnie coûte le plus cher ?</a>
+                    </ul>
+                  </li>
+                </ul>
+
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+
+                  <div class="bouton_animation">
+
+                  <button><a href="#">Bouton animation</a></button>
+
+                 </div>
+
+                  <button class="btn btn-outline-danger" type="submit">Recherche</button>
+                </form>
+
+              </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <h4 class="mb-4">Panier</h4>
+
+    <br>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </svg>
+
+    <section>
+
+      <div class="section_animation">
+
+        <h3><b><u>Norvégien</u></b></h3>
+
+        <article class="wrapper">
+    
+          <div class="images">
+    
+              <img src="Assets/norvégien.jpg" alt="Norvégien" width="155" height=110>
+              <p>Le norvégien, également appelé chat des forêts norvégiennes ou norsk skogkatt, est une race de chats à poil mi-long originaire de Norvège.</p>
+              <h5>Prix : 700€</h5>
+              <button class="btn btn-outline-danger" type="submit">Acheter</button>
+    
+          </div>
+
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Adresse de facturation</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Nom valide est requis.
+                  </div>
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Prénom</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Prénom valide est requis.
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-muted">(Option)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="prénom.nom@eemi.com">
+                  <div class="invalid-feedback">
+                    Veuillez entrer une adresse e-mail valide pour les mises à jour d'expédition.
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="address" class="form-label">Adresse</label>
+                  <input type="text" class="form-control" id="address" placeholder="28 Pl. de la Bourse" required>
+                  <div class="invalid-feedback">
+                    Veuillez entrer une adresse d'expédition.
+                  </div>
+                </div>
+    
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Pays</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Choix...</option>
+                    <option>États-Unis</option>
+                    <option>France</option>
+                    <option>Royaume-Uni</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+              </div>
+    
+              <hr class="my-4">
+    
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="same-address">
+                <label class="form-check-label" for="same-address">L'adresse de livraison est la même que mon adresse de facturation</label>
+              </div>
+    
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Conservez ces informations pour la prochaine fois</label>
+              </div>
+    
+              <hr class="my-4">
+    
+              <h4 class="mb-3">Payment</h4>
+    
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                  <label class="form-check-label" for="credit">Carte de crédit</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                  <label class="form-check-label" for="debit">Carte de débit</label>
+                </div>
+                <div class="form-check">
+                  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+    
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Nom de la carte</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Nom de la carte est requise
+                  </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label">N° carte de crédit</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Numéro de la carte de crédit est requis
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Expiration</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Date d'expiration requise
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Code de sécurité requis
+                  </div>
+                </div>
+              </div>
+    
+              <hr class="my-4">
+    
+              <button class="w-100 btn btn-primary btn-lg" type="submit">Continuer à payer</button>
+            </form>
+          </div>
+      </div>
+  
+      </article>
+
+        </div>
+      
+      </section>
+
+    <br>
+
+    <div class="container">
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+          <ul class="nav-link px-2 text-muted">
+              <li>NOUS CONTACTER
+                <br>(réseaux sociaux)
+                <br>
+                <img src="Assets/Instagram.png" alt="logo Instagram" width="50">
+                <img src="Assets/Twitter.png" alt="logo Twitter" width="55">
+                <img src="Assets/YouTube.png" alt="logo YouTube" width="55">
+              </li>
+          </ul>
+
+          <p class="col-md-4 mb-0 text-muted">&copy; 2023 - EEMI</p>
+      
+          <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+
+        </footer>
+
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
