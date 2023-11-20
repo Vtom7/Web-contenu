@@ -1,0 +1,99 @@
+*,
+::after
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-family: 'Arial', serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 400%;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: 'Arial', cursive;
+    background-image: url(https://www.agglo-seine-eure.fr/wp-content/uploads/2019/07/AggloSeineEure_Sport.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  h2 {
+    font-family: 'Arial', serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    animation:  5s ease-in eddy 2s;
+    animation-fill-mode: both;
+  }
+
+  .wrapper
+  {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  article img {
+    width: 4rem;
+    height: 3rem;
+  }
+
+
+  .bienvenue {
+    background-color: beige;
+    margin: 2rem 5rem ;
+    opacity: 0.75;
+  }
+
+  .map-form {
+    background-color: beige;
+    margin: 2rem 5rem ;
+  }
+
+  footer {
+    background-color: yellow;
+    text-align: center;
+  }
+
+  h4 {
+    color: black;
+  }
+
+.reseaux {
+  display: flex;
+  list-style: none;
+}
+
+.reseaux li {
+  justify-content:  center;
+}
+  
+  @keyframes eddy {
+    0% {
+  
+      transform: translateX(0)  scale(0) rotate(0) ;
+  
+    }
+  
+    100%{
+  
+      transform:  translateX(700px)scale(150%)  rotate(360deg) ;
+  
+    }
+  }
