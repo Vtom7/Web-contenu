@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url('Assets/etoiles.png'), linear-gradient(to right, #BE70FF, #FF552C, #FFB92C);
+    font-family: "arnika-variable", sans-serif;
+    font-variation-settings: "wdth" 85;
+}
+
+.haut-menu {
+    display: flex;
+    background: url('Assets/etoiles.png'), linear-gradient(to right, blueviolet, #FF0055);
+    border: 3px solid black;
+}
+
+h1 {
+    text-align: center;
+    font-family: quiche-text, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    justify-content: space-around;
+}
+
+nav {
+    display: grid;
+    width: 100%;
+}
+  
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+  
+nav ul li {
+    padding: 2rem;
+    list-style: none;
+    text-transform: uppercase;
+    align-items: center;
+    font-weight: 500;
+}
+  
+nav ul li:first-child {
+    border-left: none;
+}
+  
+  nav ul li:hover {
+    background: linear-gradient(to left, blueviolet, orange);
+}
+  
+  nav ul li a {
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+}
+
+.sous-menus {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to right, #A200FF, #FF4D00, #FFB900);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.sous-menus a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.sous-menus a:hover {
+    background-color: yellow;
+}
+
+.sous-menus a:hover {
+    background-color: yellow;
+}
+
+.menus:hover .sous-menus {
+    display: block;
+}
+
+.search {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    border-radius: 50px;
+    width:40%;
+    text-align: center;
+    background: linear-gradient(to left, #8F00FF, #FF0055, #FFE000);
+    color: white;
+    font-size: 1.2em;
+}
+
+::placeholder {
+    color: white;
+}
+
+section {
+    background-color: #FF0055;
+    margin: 30px;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.images {
+    display: block;
+    margin: 1rem;
+    justify-content: center;
+}
+
+p {
+    font-family: dream-big-wide, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12em;
+    font-size: 1.3em;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.notes_musique {
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(to left,#4D00FF, #FF2700);
+    text-align: center;
+    border: 3px solid black;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color: black;
+}
+
+.repere {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.copyringht {
+    background-color: blue;
+}
+
+@media (max-width: 600px) {
+    .haut-menu, nav ul, section, .logo-music {
+        display: inline;
+        text-align: center;
+    }
+
+    .wrapper {
+        display: inline;
+    }
+
+    .notes_musique img {
+        float: right;
+        width: 350px;
+        height: 220px;
+        padding: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .haut-menu, nav ul:not(:first-child) {
+        display: inline;
+    }
+    .haut-menu {
+        float: left;
+        align-items: start;
+        width: 130px;
+        height: 1800px;
+    }
+
+    .menus {
+        height: 290px;
+    }
+
+    .sous-menus {
+        padding-left: 2.6rem;
+    }
+
+    nav ul {
+        width: 130px;
+    }
+
+    nav li a{
+        width: 130px;
+        margin-left: -27px;
+    }
+    
+    section {
+        float: right;
+    }
+
+    .search, figure {
+        display: block;
+        padding: 1rem;
+    }
+
+    figcaption {
+        font-style: normal;
+    }
+
+    input, audio {
+        width: 265px;
+        height: 40px;
+    }
+
+    footer {
+        float: left;
+        width: 483px;
+    }
+}
