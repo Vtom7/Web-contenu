@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&family=Work+Sans:wght@600&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 , h2 , h3 , h4 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+p, label, button, input {
+  font-family: 'Monda', sans-serif;
+}
+
+
+/* HEADER */
+
+header{
+  background-color: #fff;
+  
+}
+
+.logo-japan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header p{
+  color: red;
+}
+
+nav {
+  background-color: red;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  border-left: 2px solid aliceblue;
+  width: calc(100%/5);
+  text-align: center;
+  font-weight: 600;
+}
+
+nav ul li:first-child {
+  border-left: none;
+}
+
+nav ul li:hover {
+  background-color: #333;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  
+}
+
+/* MAIN */
+
+body {
+  background-image: url(Asset/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+article img {
+  width: 4rem;
+  height: 3rem;
+}
+
+
+.bienvenue {
+  background-color: beige;
+  margin: 2rem 5rem ;
+}
+
+
+
+.map-form {
+  background-color: beige;
+  margin: 2rem 5rem ;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: aqua;
+  text-align: center;
+}
+
+h4 {
+  color: #fff;
+}
+
+.reseaux {
+  display: flex;
+  list-style: none;}
+
+.reseaux li {
+  justify-content:  center;
+  
+}
+
+@media (max-width: 480px) {
+
+  .wrapper, nav ul,  .map-form {
+  flex-direction: column; 
+}
+
+  iframe {
+    min-height: 100px;
+  }
+}
