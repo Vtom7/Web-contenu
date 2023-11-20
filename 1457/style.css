@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "arnika-variable", sans-serif;
+    font-variation-settings: "wdth" 85;
+    background: url("https://www.solutions-ouest-implantation.fr/wp-content/uploads/2022/06/Cybersecurite-900x506.png");
+}
+
+.haut-menu {
+    display: flex;
+    background: blue;
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    font-family: quiche-text, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    justify-content: space-around;
+    color: aqua;
+}
+
+nav {
+    display: grid;
+    width: 100%;
+}
+  
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+  
+nav ul li {
+    padding: 2rem;
+    list-style: none;
+    text-transform: uppercase;
+    align-items: center;
+    font-weight: 500;
+}
+  
+nav ul li:first-child {
+    border-left: none;
+}
+  
+  nav ul li:hover {
+    background: #008cff;
+}
+  
+  nav ul li a {
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    background-color: #00f2ff;
+    margin: 30px;
+    border-radius: 20px;
+    border: 2px solid black;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    border-radius: 50px;
+    width:40%;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 1.5em;
+}
+
+::placeholder {
+    color: white;
+}
+
+.article {
+    display: block;
+    margin: 1rem;
+    justify-content: center;
+}
+
+p {
+    font-family: dream-big-wide, sans-serif;
+    font-style: normal;
+    margin-right: auto;
+    width: 12em;
+    font-size: 1em;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    text-align: center;
+}
+
+#value {
+    font-size: 4rem;
+}
+
+.btn {
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0.3rem;
+    border-radius: 10px;
+}
+
+footer {
+    background: #929292;
+    text-align: center;
+    border: 1px solid black;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color: black;
+}
+
+.repere {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.copyringht {
+    background-color: blue;
+}
+
+@media (max-width: 600px) {
+    .haut-menu, nav ul, section, .logo-cybersécurité {
+        display: inline;
+        text-align: center;
+    }
+
+    .wrapper {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .haut-menu, nav ul:not(:first-child) {
+        display: inline;
+    }
+    .haut-menu {
+        float: left;
+        align-items: start;
+        width: 130px;
+        height: 4500px;
+    }
+
+    .menus {
+        height: 290px;
+    }
+    
+    nav ul {
+        width: 130px;
+    }
+
+    nav li a{
+        width: 130px;
+        margin-left: -27px;
+    }
+    
+    section {
+        float: right;
+        width: 280px;
+    }
+
+    footer {
+        float: left;
+        width: 497px;
+    }
+}
