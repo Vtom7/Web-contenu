@@ -1,0 +1,76 @@
+<?php 
+$DB = NULL;
+try
+{
+	//activation des erreurs PDO
+	$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+	
+	//Préparation de la chaine de connexion
+	$DB = new PDO('mysql:host=localhost;dbname=formulaire', 'root', '', $pdo_options);
+	
+	//Connexion à la base de données
+	$DB->exec("SET CHARACTER SET utf8");
+}
+
+//Si la connexion est impossible, afficher le message d'erreur
+catch(Exception $e)
+{
+	die('Erreur : '.$e->getMessage());
+}
+
+//Récupération des informations saisie dans le formulaire
+$db_nom = isset($_POST['db_nom']);
+$db_prenom = isset($_POST['db_prenom']);
+$db_direction = isset($_POST['db_direction']);
+$db_service = isset($_POST['db_service']);
+$db_telephone = isset($_POST['db_telephone']);
+$db_matricule = isset($_POST['db_matricule']);
+$db_email = isset($_POST['db_email']);
+$db_date_formation_1 = isset($_POST['db_date_formation_1']);
+$db_code_postal = isset($_POST['db_code_postal']);
+$db_ville = isset($_POST['db_ville']);
+$db_liste_electorale = isset($_POST['db_liste_electorale']);
+$db_disposescrutin1 = $_POST['db_disposescrutin1'];
+$db_disposescrutin1 = implode(' et ' , $db_disposescrutin1);
+$db_remuneration = isset($_POST['db_remuneration']);
+
+//Préparation de la requête
+$sql= ("INSERT INTO candidature (`db_date_demande`, `db_nom`, `db_prenom`, `db_service`, `db_telephone`, `db_matricule`,`db_email`, `db_date_formation_1`, `db_code_postal`, `db_ville`, `db_liste_electorale`, `db_disposescrutin1`, `db_remuneration`)
+VALUES (NOW(), UPPER(:db_nom), UPPER(:db_prenom), :db_service, :db_telephone, :db_matricule, :db_email, :db_date_formation_1, :db_code_postal, :db_ville, :db_liste_electorale, :db_disposescrutin1, :db_remuneration)");
+$req= $DB->prepare($sql);
+
+//Exécution de la requête
+$req->execute(array(
+	':db_nom' => $_POST['db_nom'],
+	':db_prenom' => $_POST['db_prenom'],
+	':db_service' => $_POST['db_service'],
+	':db_telephone' => $_POST['db_telephone'],
+	':db_matricule' => $_POST['db_matricule'],
+	':db_email' => $_POST['db_email'],
+	':db_date_formation_1' => $_POST['db_date_formation_1'],
+	':db_code_postal' => $_POST['db_code_postal'],
+	':db_ville' => $_POST['db_ville'],
+	':db_liste_electorale' => $_POST['db_liste_electorale'],
+	':db_disposescrutin1' => $db_disposescrutin1,
+	':db_remuneration' => $_POST['db_remuneration']
+	));
+
+//Retourne le nombre de lignes affectées par le dernier appel à la fonction PDOStatement::execute()
+//if($req->rowCount() > 0){
+ // echo "<center>Merci <strong>'".$_POST['db_nom'].' '.$_POST['db_prenom']."'</strong>! Votre candidature a bien été enregistrée. Un email récapitulatif vous a été envoyé à l\'adresse '".$_POST['db_email']."'.</center>";
+//}
+$_SESSION['success'] = '<div class="row">
+							<div class="col-md-12">
+								<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									Merci <strong>'.$_POST['db_nom'].' '.$_POST['db_prenom'].'</strong>! Votre demande a bien été enregistrée. Un email récapitulatif vous a été envoyé à l\'adresse '.$_POST['db_email'].'.
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+							</div>
+						</div>';
+//envoi du mail 
+include 'mail2.php';
+
+//Fermeture de la connexion avec la base de données
+$bdd = NULL;
+
+?>
