@@ -1,2 +1,2 @@
 # Web-contenu
-Mes codes avec le code HTML, CSS et PHP
+Mes projets avec les codes HTML, CSS, Bootstrap, JavaScript, PHP, et SQL.
